@@ -1,0 +1,25 @@
+server:
+  port: 8080
+  read_timeout: 10s
+  write_timeout: 10s
+
+database:
+  host: localhost
+  port: 5432
+  user: your_username
+  password: your_password
+  name: auditcue_db
+
+oauth:
+  google:
+    client_id: your_google_client_id
+    client_secret: your_google_client_secret
+    redirect_uri: http://localhost:8080/auth/google/callback
+
+logging:
+  level: info
+  file: logs/auditcue.log
+
+features:
+  signup_enabled: true
+  oauth_enabled: true
